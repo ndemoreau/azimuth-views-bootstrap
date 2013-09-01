@@ -4,6 +4,8 @@ Package.describe({
 
 Package.on_use(function (api) {
   api.use(['templating'], 'client');
+  api.use(['bootstrap'], 'client');
+
   api.add_files([
     'blocks/basic_content/basic_content.html',
     'blocks/basic_content/basic_content_edit.html',

@@ -6,26 +6,31 @@
     </div>
     <div class="modal-body">
       <!-- [Add Block] | Block template | Date created | [Preview] (shows below) -->
-      <table class="table">
-          <thead>
-            <tr>
-              <th>&nbsp;</th>
-              <th>Template</th>
-              <th>Created</th>
-              <th style="width: 36px;"></th>
-            </tr>
-          </thead>
-          <tbody>
-            {{#each allBlocks}}
+      <div class="row">
+        <div class="span6">
+          <table class="table">
+            <thead>
               <tr>
-                <td><a class="btn add-existing-block" id="{{_id}}">Insert</a></td>
-                <td>{{template}}</td>
-                <td>{{humanReadableTime created}}</td>
-                <td><a class="preview-block"><div class="block-preview" style="display: none;">{{{renderBlock this}}}</div><i class="icon-search"></i></a></td>
+                <th>&nbsp;</th>
+                <th>Template</th>
+                <th>Created</th>
+                <th style="width: 36px;"></th>
               </tr>
-            {{/each}}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {{#each allBlocks}}
+                <tr>
+                  <td><a class="btn add-existing-block" id="{{_id}}">Insert</a></td>
+                  <td>{{template}}</td>
+                  <td>{{humanReadableTime created}}</td>
+                  <td><a class="preview-block"><div class="block-preview" style="display: none;">{{{renderBlock this}}}</div><i class="icon-search"></i></a></td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+        <div class="span6 existingBlockPreview"></div>
+      </div>
     </div>
     <div class="modal-footer">
       <a class="btn" data-dismiss="modal">Cancel</a>
