@@ -39,7 +39,11 @@
             </li>
           </ul>
         {{/if}}
-        {{#ifSetting 'showLoginInHeader'}}<div class="desktop-login hidden-phone">{{ loginButtons }}</div>{{/ifSetting}}
+        {{#ifSetting 'showLoginInHeader'}}
+          <ul class="nav pull-right">
+            <li><a href="/login"><i class="icon-user logged-in"></i></a></li>
+          </ul>
+        {{/ifSetting}}
       </div>
     </div>
   </div>

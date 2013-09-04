@@ -3,10 +3,13 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
+  api.use(['less'], 'client');
   api.use(['templating'], 'client');
   api.use(['bootstrap'], 'client');
+  api.use(['font-awesome'], 'client');
 
   api.add_files([
+    'css/style.less',
     'blocks/basic_content/basic_content.html',
     'blocks/basic_content/basic_content_edit.html',
     'blocks/blog_post/blog_post.html',
@@ -54,7 +57,8 @@ Package.on_use(function (api) {
     'views/header.html',
     'views/pages/new_page.html',
     'views/pages/page_edit_bottom.html',
-    'views/pages/page_template_selector.html'
+    'views/pages/page_template_selector.html',
+    'lib/utils.js'
   ], 'client');
 });
 
