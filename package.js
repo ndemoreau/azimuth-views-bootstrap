@@ -6,7 +6,6 @@ Package.on_use(function (api) {
   api.use(['less'], 'client');
   api.use(['templating'], 'client');
   api.use(['bootstrap'], 'client');
-  api.use(['font-awesome'], 'client');
 
   api.add_files([
     'css/style.less',
