@@ -6,7 +6,7 @@ Package.on_use(function (api) {
   api.use(['less'], 'client');
   api.use(['templating'], 'client');
   api.use(['bootstrap'], 'client');
-  api.use(['azimuth-core', 'bootstrap'], 'client');
+  api.use(['azimuth-core'], 'client', {unordered: true});
 
   api.add_files([
     'css/style.less',
