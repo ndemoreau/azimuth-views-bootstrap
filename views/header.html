@@ -42,7 +42,7 @@
         {{/if}}
         {{#ifSetting 'showLoginInHeader'}}
           <ul class="nav pull-right">
-            <li><a href="/login"><i class="icon-user logged-in"></i></a></li>
+            <li><a href="/login"><i class="icon-user{{#if signedInAs}} logged-in{{/if}}"></i></a></li>
           </ul>
         {{/ifSetting}}
       </div>
