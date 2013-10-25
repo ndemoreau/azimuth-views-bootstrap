@@ -1,34 +1,35 @@
 <template name='login'>
-  <div class="container">
+  <div class="container login">
     <div class="row">
-      <div class="entry col-md-4 col-md-offset-4">
-        {{#if otherLoginServices}}
-        <div class="entry-social">
-          {{#each loginServices}}
-            {{> social}}
-          {{/each}}
-          <div class="email-option">
-            <strong class="line-thru or-sign-in">OR</strong>
-          </div>
-        </div>
+      <div class="span6">
+        <h3>Login</h3>
+        {{#if signedInAs}}
+          <p>Signed in as <strong>{{signedInAs}}</strong></p>
+          <a id="logout" class="btn">Log out</a>
+        {{else}}
+          {{#if otherLoginServices}}
+            <div class="entry-social">
+              {{#each loginServices}}
+                {{> social}}
+              {{/each}}
+              <div class="email-option or-sign-in">Or...</div>
+            </div>
+          {{/if}}
+          {{> error}}
+          <form class="entry-form" id='signIn'>
+            <div class="form-group">
+              <input name="email" type="email" class="form-control" value='{{email}}' placeholder="{{emailPlaceholder}}">
+            </div>
+            <div class="form-group">
+              <input name="password" type="password" class="form-control" value='{{password}}' placeholder="Password">
+            </div>
+            <button type="submit" class="submit btn btn-default">Sign in</button>
+          </form>
+          <p>
+            <a href="/sign-up">Create Account</a><span class="login-separator"> • </span>
+            <a href="/forgot-password">Recover Password</a>
+          </p>
         {{/if}}
-        {{> error}}
-        {{#unless otherLoginServices}}
-          <div class="email-option">
-            <h3>Sign In</h3>
-          </div>
-        {{/unless}}
-        <form class="entry-form" id='signIn'>
-          <div class="form-group">
-            <input name="email" type="email" class="form-control" value='{{email}}' placeholder="{{emailPlaceholder}}">
-          </div>
-          <div class="form-group">
-            <input name="password" type="password" class="form-control" value='{{password}}' placeholder="Password">
-          </div>
-          <p><a href="/forgot-password">Forgot password?</a></p>
-          <button type="submit" class="submit btn btn-default">Sign in</button>
-        </form>
-        <p class="entry-signup-cta">Don't have an account? <a href="/sign-up">Sign up</a></p>
       </div>
     </div>
   </div>
