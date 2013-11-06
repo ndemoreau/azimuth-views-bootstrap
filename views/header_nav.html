@@ -3,12 +3,12 @@
     {{#each this}}
       {{#if children}}
         <li class="dropdown">
-          <a class="dropdown-toggle disabled" href="{{slug}}" data-toggle="dropdown">{{title}}<b class="caret"></b></a>
+          <a class="dropdown-toggle disabled" href="{{url}}" data-toggle="dropdown">{{title}}<b class="caret"></b></a>
           {{>header_nav_child}}
         </li>
       {{else}}
         <li>
-          <a href="/{{slug}}">{{title}}</a>
+          <a href="{{url}}">{{title}}</a>
         </li>
       {{/if}}
     {{/each}}
@@ -46,14 +46,14 @@
     {{#each children}}
       {{#if children}}
         <li class="dropdown">
-          <a class="dropdown-toggle disabled" href="{{slug}}">{{title}}<b class="caret"></b></a>
+          <a class="dropdown-toggle disabled" href="{{url}}">{{title}}<b class="caret"></b></a>
           <ul class="dropdown-menu">
             {{>header_nav_child}}
           </ul>
         </li>
       {{else}}
         <li>
-          <a href="/{{slug}}">{{title}}</a>
+          <a href="{{url}}">{{title}}</a>
         </li>
       {{/if}}
     {{/each}}
