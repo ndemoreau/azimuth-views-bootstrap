@@ -1,5 +1,5 @@
 <template name="header">
-  <div class="navbar">
+  <div class="navbar hide-until-rendered">
     <div class="navbar-inner">
       <div class="container-fluid">
 
@@ -12,9 +12,11 @@
         <a class="brand" href="/">{{#ifSetting "logoUrl"}}<img class="logo" src="{{getSetting 'logoUrl'}}">{{/ifSetting}}{{getSetting 'siteName'}}</a>
 
         <div class="page-menu nav-collapse collapse">
-          {{#with headerNav}}
-            {{>header_nav_root}}
-          {{/with}}
+          {{#isolate}}
+            {{#with headerNav}}
+              {{>header_nav_root}}
+            {{/with}}
+          {{/isolate}}
         </div>
 
         {{#ifAuthorOrAdmin}}

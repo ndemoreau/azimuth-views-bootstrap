@@ -32,6 +32,7 @@ Package.on_use(function (api) {
     'pages/sidebar_right/sidebar_right_edit.html',
     'views/layout.html',
     'views/404.html',
+    'views/loading.html',
     'views/not_authorized.html',
     'views/accounts/account_buttons.html',
     'views/accounts/error.html',
