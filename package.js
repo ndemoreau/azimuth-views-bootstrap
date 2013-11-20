@@ -55,6 +55,7 @@ Package.on_use(function (api) {
     'views/form/text.html',
     'views/form/textarea.html',
     'views/form/wysiwyg.html',
+    'views/form/metadata.html',
     'views/header.html',
     'views/header_nav.html',
     'views/pages/new_page.html',
