@@ -4,9 +4,7 @@
       <div class="container-fluid">
 
         <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <i class="fa fa-bars"></i>
         </button>
 
         <a class="brand" href="/">{{#ifSetting "logoUrl"}}<img class="logo" src="{{getSetting 'logoUrl'}}">{{/ifSetting}}{{getSetting 'siteName'}}</a>
@@ -22,7 +20,7 @@
         {{#ifAuthorOrAdmin}}
           <ul class="nav pull-right hidden-phone">
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs"></i> <b class="caret"></b></a>
+              <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i> <b class="caret"></b></a>
               <ul id="adminMenu" class="dropdown-menu">
                 <li class="nav-header">Admin</li>
                 {{#if isInRole 'admin'}}
@@ -46,7 +44,7 @@
         {{/ifAuthorOrAdmin}}
         {{#ifSetting 'showLoginInHeader'}}
           <ul class="nav pull-right">
-            <li><a href="/login"><i class="icon-user{{#if signedInAs}} logged-in{{/if}}"></i></a></li>
+            <li><a href="/login"><i class="fa fa-user{{#if signedInAs}} logged-in{{/if}}"></i></a></li>
           </ul>
         {{/ifSetting}}
       </div>
