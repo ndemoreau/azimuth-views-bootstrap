@@ -3,7 +3,7 @@
   "description": "Azimuth CMS frontend templates (using Bootstrap 2.x)",
   "homepage": "https://github.com/mcrider/azimuth-views-bootstrap",
   "author": "Matt Crider (http://matthewcrider.com)",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "git": "https://github.com/mcrider/azimuth-views-bootstrap.git",
   "packages": {
     "azimuth-core": {}
