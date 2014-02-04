@@ -1,0 +1,38 @@
+<template name="block_display">
+  <div class="azimuth-block-zone row" data-zone={{zone}}>
+    {{#if isAuthorOrAdmin}}
+      <div class="azimuth-block-zone-toolbar">
+        <h4>{{zoneLabel zone}}</h4>
+        <a href="#" title="Add New Block" class="block-zone-add"><i class="icon icon-plus"></i></a>
+        <a href="#" title="Block Zone Settings" class="block-zone-edit"><i class="icon icon-gear"></i></a>
+      </div>
+      <div class="azimuth-block-edit-panel">
+        <ul class="edit-buttons">
+          <li><a href="#" title="Move Left" class="block-move-left"><i class="icon icon-chevron-left"></i></a></li>
+          <li><a href="#" title="Edit" class="block-edit"><i class="icon icon-document-edit"></i></a></li>
+          <li><a href="#" title="Delete" class="block-delete"><i class="icon icon-cross"></i></a></li>
+          <li><a href="#" title="Add Block After" class="block-add"><i class="icon icon-plus"></i></a></li>
+          <li><a href="#" title="Move Right" class="block-move-right"><i class="icon icon-chevron-right"></i></a></li>
+        </ul>
+      </div>
+    {{/if}}
+    {{#each pageBlocks}}
+      <div class="azimuth-block {{classifyTags}}" data-page-block-id="{{_id}}">
+        {{> renderPageBlock this}}
+      </div>
+    {{else}}
+      <div class="no-blocks">
+        <h3>There are no blocks in this block zone.  Click <a href="#" class="block-zone-add" data-zone={{zone}}><i class="icon icon-plus"></i></a> to add one!</h3>
+      </div>
+    {{/each}}
+  </div>
+  {{#if numSets}}
+    <div class="pagination" data-zone={{zone}}>
+      <ul>
+        {{#each numSets}}
+          <li class="{{currentBlockPage zone}}"><a class="page" href="#">{{this}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+</template>

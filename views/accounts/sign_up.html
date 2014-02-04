@@ -1,8 +1,8 @@
 <template name='sign_up'>
   <div class="container sign-up">
     <div class="row">
-      <div class="span6">
-        {{#ifOpenRegistration}}
+      <div class="col-md-6">
+        {{#if openRegistration}}
           <h3>Create an Account</h3>
           {{#if otherLoginServices}}
             <p class="entry-signin-cta">If you already have an account <a href="/login">sign in</a>.</p>
@@ -31,7 +31,7 @@
           </form>
         {{else}}
           <p>Sorry, registrations are currently closed</p>
-        {{/ifOpenRegistration}}
+        {{/if}}
       </div>
     </div>
   </div>

@@ -1,11 +1,11 @@
 <template name='login'>
   <div class="container login">
     <div class="row">
-      <div class="span6">
+      <div class="col-md-6">
         <h3>Login</h3>
         {{#if signedInAs}}
           <p>Signed in as <strong>{{signedInAs}}</strong></p>
-          <a id="logout" class="btn">Log out</a>
+          <a id="logout" class="btn btn-default">Log out</a>
         {{else}}
           {{#if otherLoginServices}}
             <div class="entry-social">
@@ -26,7 +26,7 @@
             <button type="submit" class="submit btn btn-default">Sign in</button>
           </form>
           <p>
-            {{#ifOpenRegistration}}<a href="/sign-up">Create Account</a><span class="login-separator"> • </span>{{/ifOpenRegistration}}
+            {{#if openRegistration}}<a href="/sign-up">Create Account</a><col-md- class="login-separator"> • </col-md->{{/if}}
             <a href="/forgot-password">Recover Password</a>
           </p>
         {{/if}}
