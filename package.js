@@ -1,5 +1,5 @@
 Package.describe({
-    summary: "Azimuth CMS frontend templates (using Bootstrap 2.x)"
+    summary: "Azimuth CMS frontend templates (using Bootstrap 3.x)"
 });
 
 Package.on_use(function (api) {
