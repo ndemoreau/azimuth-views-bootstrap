@@ -11,6 +11,7 @@
       <div class="azimuth-block {{classifyTags}}" data-page-block-id="{{_id}}">
         {{> renderPageBlock this}}
       </div>
+      {{#if break}}<div class="clear"></div>{{/if}}
     {{else}}
       <div class="no-blocks">
         <h3>There are no blocks in this block zone.  Click <a href="#" class="block-zone-add" data-zone={{zone}}><i class="icon icon-plus"></i></a> to add one!</h3>
