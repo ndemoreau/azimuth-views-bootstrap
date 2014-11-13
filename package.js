@@ -6,8 +6,8 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  api.use(['less', 'templating', 'mizzao:bootstrap-3'], 'client');
-  api.use('mcrider:azimuth-core', {unordered: true});
+  api.use(['less@1.0.11', 'templating@1.0.9', 'mizzao:bootstrap-3@3.3.0'], 'client');
+  api.use('mcrider:azimuth-core@0.3.20', {unordered: true});
 
   api.add_files('css/style.less', 'client');
   api.add_files('blocks/four_column/four_column.html', 'client');
