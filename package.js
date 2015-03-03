@@ -1,7 +1,7 @@
 Package.describe({
   name: 'mcrider:azimuth-views-bootstrap',
   summary: 'Azimuth CMS frontend templates (using Bootstrap 3.x)',
-  version: '0.3.7',
+  version: '0.3.8',
   git: 'https://github.com/mcrider/azimuth-views-bootstrap'
 });
 
