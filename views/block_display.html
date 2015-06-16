@@ -9,14 +9,16 @@
         </div>
       {{/if}}
       {{#each pageBlocks}}
-        <div class="azimuth-block {{classifyTags}}" data-page-block-id="{{_id}}">
+        <div class="azimuth-block {{classifyTags}} {{block}}" data-page-block-id="{{_id}}" >
           {{> renderPageBlock data=this}}
         </div>
         {{#if break}}<div class="clear"></div>{{/if}}
       {{else}}
-        <div class="no-blocks">
-          <h3>There are no blocks in this block zone.  Click <a href="#" class="block-zone-add" data-zone={{zone}}><i class="icon icon-plus"></i></a> to add one!</h3>
-        </div>
+          {{#if currentUser}}
+            <div class="no-blocks">
+              <h3>There are no blocks in this block zone.  Click <a href="#" class="block-zone-add" data-zone={{zone}}><i class="icon icon-plus"></i></a> to add one!</h3>
+            </div>
+          {{/if}}
       {{/each}}
     </div>
     {{#if numSets}}

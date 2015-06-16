@@ -1,4 +1,4 @@
-# [Twitter Bootstrap for Azimuth CMS](http://github.com/mcrider/azimuth-views-bootstrap)
+# [Twitter Bootstrap for Azimuth CMS](http://github.com/ndemoreau/azimulti-views-bootstrap)
 
 This is the Twitter Bootstrap framework for the Meteor.js-based Azimuth CMS.  You can install it from Meteorite using `mrt add azimuth-views-bootstrap`.
 

@@ -1,19 +1,21 @@
 Package.describe({
-  name: 'mcrider:azimuth-views-bootstrap',
-  summary: 'Azimuth CMS frontend templates (using Bootstrap 3.x)',
-  version: '0.3.8',
-  git: 'https://github.com/mcrider/azimuth-views-bootstrap'
+  name: 'ndemoreau:azimulti-views-bootstrap',
+  summary: 'Azimuth Multilanguage CMS frontend templates (using Bootstrap 3.x)',
+  version: '0.4.1',
+  //git: 'https://github.com/ndemoreau/azimuth-views-bootstrap'
 });
 
 Package.on_use(function (api) {
   api.use(['less@1.0.11', 'templating@1.0.9', 'mizzao:bootstrap-3@3.3.0'], 'client');
-  api.use('mcrider:azimuth-core@0.3.20', {unordered: true});
+  api.use('ndemoreau:azimulti-core@0.4.1', {unordered: true});
 
   api.add_files('css/style.less', 'client');
   api.add_files('blocks/four_column/four_column.html', 'client');
   api.add_files('blocks/six_column/six_column.html', 'client');
   api.add_files('blocks/three_column/three_column.html', 'client');
-  api.add_files('blocks/twelve_column/twelve_column.html', 'client');
+  api.add_files('blocks/block_with_title/block_with_title.html', 'client');
+  api.add_files('blocks/eight_column/eight_column.html', 'client');
+  api.add_files('blocks/ten_column/ten_column.html', 'client');
   api.add_files('blocks/two_column/two_column.html', 'client');
   api.add_files('pages/home_page/home_page.html', 'client');
   api.add_files('pages/page_default/page_default.html', 'client');
